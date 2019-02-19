@@ -3,11 +3,14 @@ import PropTypes from 'prop-types';
 
 class Loader extends React.Component {
   componentDidMount() {
+    const { url, global } = this.props;
     if (
       typeof window !== 'undefined'
       && window.document
       && window.document.createElement
     ) {
+      if (!url) throw new Error('url parameter is required');
+      if (!global) throw new Error('global parameter is required');
       this.loadScript();
     }
   }
