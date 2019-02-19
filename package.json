@@ -2,9 +2,21 @@
   "name": "react-external-script-loader",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/react-external-script-loader.cjs.js",
+  "module": "dist/react-external-script-loader.esm.js",
+  "browser": "dist/react-external-script-loader.umd.production.min.js",
   "scripts": {
-    "test": ""
+    "clear": "rm -rf dist",
+    "build": "npm run clear && NODE_ENV=development rollup -c && NODE_ENV=production rollup -c",
+    "lint": "eslint ",
+    "prepublish": "npm run build",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "src/*.js": [
+      "npm run lint",
+      "git add"
+    ]
   },
   "keywords": [],
   "author": "",
@@ -12,6 +24,9 @@
   "dependencies": {
     "prop-types": "^15.7.2",
     "react": "^16.8.2"
+  },
+  "peerDependencies": {
+    "react": "16.x"
   },
   "devDependencies": {
     "@babel/core": "^7.3.3",
@@ -23,6 +38,13 @@
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-plugin-react": "^7.12.4"
+    "eslint-plugin-react": "^7.12.4",
+    "lint-staged": "^8.1.4",
+    "rollup": "^1.2.2",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-node-resolve": "^4.0.0",
+    "rollup-plugin-replace": "^2.1.0",
+    "rollup-plugin-terser": "^4.0.4"
   }
 }
