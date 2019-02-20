@@ -42,6 +42,7 @@
     "loader"
   ],
   "author": "Maksim Markelov <mapkeji26@gmail.com>",
+  "homepage": "https://mmarkelov.github.io/react-external-script-loader/",
   "license": "MIT",
   "dependencies": {
     "prop-types": "^15.7.2",

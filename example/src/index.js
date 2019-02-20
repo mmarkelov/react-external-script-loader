@@ -13,6 +13,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <h1>React External Script Loader Example</h1>
+        <h3>Dynamic load vk api script</h3>
         <button onClick={() => this.setState({ load: true })}>
           Load external script
         </button>

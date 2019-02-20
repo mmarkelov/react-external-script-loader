@@ -33,7 +33,7 @@ module.exports = {
 
   output: {
     path: `${examples}/build`,
-    publicPath: devServer ? '/' : '/react-preloader/',
+    publicPath: devServer ? '/' : '/react-external-script-loader/',
     filename: 'static/js/[name].[chunkhash:8].js',
   },
 
