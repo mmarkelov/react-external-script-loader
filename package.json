@@ -1,7 +1,8 @@
 {
   "name": "react-external-script-loader",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.0.1",
+  "private": false,
+  "description": "React component for loading external scripts",
   "main": "dist/react-external-script-loader.cjs.js",
   "module": "dist/react-external-script-loader.esm.js",
   "browser": "dist/react-external-script-loader.umd.production.min.js",
@@ -24,9 +25,24 @@
       "git add"
     ]
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mmarkelov/react-external-script-loader"
+  },
+  "keywords": [
+    "react",
+    "extenal",
+    "scripts",
+    "component",
+    "reactjs",
+    "loader"
+  ],
+  "author": "Maksim Markelov <mapkeji26@gmail.com>",
+  "license": "MIT",
   "dependencies": {
     "prop-types": "^15.7.2",
     "react": "^16.8.2"
