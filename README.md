@@ -9,9 +9,30 @@ npm install react-external-script-loader
 yarn add react-external-script-loader
 ```
 
-### Basic example
+## Usage
 
-You can use **ShowPreloader** component for this purpose
+```js
+import Loader from 'react-external-script-loader';
+
+...
+
+<Loader url="https://vk.com/js/api/openapi.js?160" global="VK" />
+
+```
+
+## Component
+
+### Options
+
+| Property              | Type   | Description                             |
+| -------------         |:-----: | :-----                                  |
+| **url**(required)     | string | Url of external script                  |
+| **global**(required)  | string | name of object if it loads successfully |
+| **options**           | object | Script options - possible keys: {type, charset, async, defer}. You can ckeck it (here)[https://www.w3schools.com/tags/tag_script.asp]  |
+| **onLoad**            | function | Called when script loaded ```(global: object): void```                |
+| **onError**           | function | Called when script loading was failed ```void```                |
+
+## Basic example
 
 ```js
 import Loader from 'react-external-script-loader';
