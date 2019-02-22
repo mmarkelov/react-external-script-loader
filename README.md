@@ -28,7 +28,7 @@ import Loader from 'react-external-script-loader';
 | -------------         |:-----: | :-----                                  |
 | **url**(required)     | string | Url of external script                  |
 | **global**(required)  | string | name of object if it loads successfully |
-| **options**           | object | Script options - possible keys: {type, charset, async, defer}. You can ckeck it (here)[https://www.w3schools.com/tags/tag_script.asp]  |
+| **options**           | object | Script options - possible keys: {type, charset, async, defer}. You can ckeck it [here](https://www.w3schools.com/tags/tag_script.asp)  |
 | **onLoad**            | function | Called when script loaded ```(global: object): void```                |
 | **onError**           | function | Called when script loading was failed ```void```                |
 
