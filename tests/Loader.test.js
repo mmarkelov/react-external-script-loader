@@ -20,4 +20,12 @@ describe('Loader', () => {
       expect(e.message).toEqual('global parameter is required');
     }
   });
+
+  test('should render correctly when required props are provided', () => {
+    const loadScript = jest.spyOn(Loader.prototype, 'loadScript');
+
+    shallow(<Loader url="test.com/test.js" global="test" />);
+
+    expect(loadScript).toHaveBeenCalled();
+  });
 });
